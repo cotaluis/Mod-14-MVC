@@ -1,0 +1,16 @@
+<h2>Welcome to the Blog CMS Homepage</h2>
+
+{{#if posts.length}}
+  <ul>
+    {{#each posts}}
+      <li>
+        <a href="/server/routes/postcontroller.js">
+          {{title}} ({{createdAt}})
+        </a>
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>No blog posts available.</p>
+{{/if}}
+
